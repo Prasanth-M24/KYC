@@ -1,0 +1,15 @@
+{
+  "names": [
+    "TEST FRAUD USER",
+    "SYNTHETIC IDENTITY DEMO",
+    "BLACKLISTED APPLICANT"
+  ],
+  "phones": [
+    "9000000000",
+    "9999999999"
+  ],
+  "panNumbers": [
+    "AAAAA0000A",
+    "ZZZZZ9999Z"
+  ]
+}

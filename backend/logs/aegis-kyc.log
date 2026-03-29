@@ -1,0 +1,176 @@
+[2026-03-26T05:40:41.383Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-26T05:40:41.417Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-26T05:40:41.427Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-26T05:58:58.867Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-26T05:58:58.906Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-26T05:58:58.921Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-26T06:02:17.907Z] INFO: Session created: 413a1b9e-0f0d-4ef7-a646-fe7e0b70f387
+[2026-03-26T06:06:01.928Z] INFO: Session created: 7cf967f7-19fc-4dd7-af2c-58971a6c8265
+[2026-03-26T06:24:12.578Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-26T06:24:12.601Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-26T06:24:12.610Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-26T07:54:58.126Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-26T07:54:58.149Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-26T07:54:58.157Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-26T08:00:59.345Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-26T08:00:59.400Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-26T08:00:59.413Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-26T08:32:27.890Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-26T08:32:27.902Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-26T08:32:27.905Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-26T08:32:52.827Z] INFO: Session created: 12a8b471-6667-4b93-8831-df91c2e3e88f
+[2026-03-26T08:33:32.852Z] INFO: Session created: a398af7b-c97b-4d88-9225-49b0e30ea6fb
+[2026-03-26T08:34:43.116Z] WARN: Document service error: Request failed with status code 500
+[2026-03-26T08:35:26.750Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-26T08:35:26.758Z] INFO: KYC completed: a398af7b-c97b-4d88-9225-49b0e30ea6fb → REVIEW (risk=60)
+[2026-03-26T08:55:10.157Z] INFO: Session created: 09d6f22e-3771-422b-b9f0-01c4fce79bf6
+[2026-03-26T08:56:08.708Z] WARN: Document service error: Request failed with status code 424
+[2026-03-26T08:56:15.364Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-26T08:56:15.374Z] INFO: KYC completed: 09d6f22e-3771-422b-b9f0-01c4fce79bf6 → REVIEW (risk=60)
+[2026-03-26T09:14:07.792Z] INFO: Session created: 6b1ed639-1aa5-40e5-a574-d787e66e5dac
+[2026-03-26T09:14:36.530Z] WARN: Document service error: Request failed with status code 424
+[2026-03-26T09:14:41.601Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-26T09:14:41.613Z] INFO: KYC completed: 6b1ed639-1aa5-40e5-a574-d787e66e5dac → REVIEW (risk=60)
+[2026-03-26T09:22:25.890Z] INFO: Session created: 0c52e720-f5ef-4af1-81cd-c4a8b7fe27f7
+[2026-03-27T03:57:17.877Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T03:57:17.915Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-27T03:57:17.920Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T03:58:34.577Z] INFO: Session created: f4811698-7173-4844-83e6-a6eb5d01d731
+[2026-03-27T04:00:25.707Z] WARN: API Call failed (Attempt 1/2) for /analyze. Retrying...
+[2026-03-27T04:00:36.765Z] WARN: API Call failed (Attempt 2/2) for /analyze. Retrying...
+[2026-03-27T04:00:48.778Z] ERROR: API Call failed after 2 retries to /analyze: timeout of 10000ms exceeded
+[2026-03-27T04:00:48.792Z] WARN: Document service error: timeout of 10000ms exceeded
+[2026-03-27T04:00:49.470Z] WARN: API Call failed (Attempt 1/2) for /verify. Retrying...
+[2026-03-27T04:00:50.496Z] WARN: API Call failed (Attempt 2/2) for /verify. Retrying...
+[2026-03-27T04:00:52.514Z] ERROR: API Call failed after 2 retries to /verify: 
+[2026-03-27T04:00:52.518Z] WARN: Biometric service error: 
+[2026-03-27T04:00:52.520Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T04:00:52.563Z] INFO: KYC completed: f4811698-7173-4844-83e6-a6eb5d01d731 → REJECTED (risk=90)
+[2026-03-27T04:01:23.623Z] INFO: Session created: b60a798c-e73f-408b-aa39-e07c92a71939
+[2026-03-27T04:10:54.491Z] INFO: Session created: 689b65ae-3664-4970-869c-a1c611b3efd2
+[2026-03-27T04:11:42.574Z] WARN: API Call failed (Attempt 1/2) for /analyze. Retrying...
+[2026-03-27T04:11:53.668Z] WARN: API Call failed (Attempt 2/2) for /analyze. Retrying...
+[2026-03-27T04:12:05.733Z] ERROR: API Call failed after 2 retries to /analyze: timeout of 10000ms exceeded
+[2026-03-27T04:12:05.785Z] WARN: Document service error: timeout of 10000ms exceeded
+[2026-03-27T04:12:07.119Z] WARN: API Call failed (Attempt 1/2) for /verify. Retrying...
+[2026-03-27T04:12:08.154Z] WARN: API Call failed (Attempt 2/2) for /verify. Retrying...
+[2026-03-27T04:12:10.195Z] ERROR: API Call failed after 2 retries to /verify: 
+[2026-03-27T04:12:10.319Z] WARN: Biometric service error: 
+[2026-03-27T04:12:10.322Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T04:12:10.596Z] INFO: KYC completed: 689b65ae-3664-4970-869c-a1c611b3efd2 → REJECTED (risk=90)
+[2026-03-27T04:15:04.890Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T04:15:04.960Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-27T04:15:04.973Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T04:15:25.232Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T04:15:25.263Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-27T04:15:25.270Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T04:17:26.529Z] INFO: Session created: 273ea337-d372-4d02-ac91-a2a478295c90
+[2026-03-27T04:18:02.897Z] WARN: API Call failed (Attempt 1/2) for /analyze. Retrying...
+[2026-03-27T04:18:13.925Z] WARN: API Call failed (Attempt 2/2) for /analyze. Retrying...
+[2026-03-27T04:18:25.956Z] ERROR: API Call failed after 2 retries to /analyze: timeout of 10000ms exceeded
+[2026-03-27T04:18:25.973Z] WARN: Document service error: timeout of 10000ms exceeded
+[2026-03-27T04:18:36.550Z] WARN: API Call failed (Attempt 1/2) for /verify. Retrying...
+[2026-03-27T04:18:47.573Z] WARN: API Call failed (Attempt 2/2) for /verify. Retrying...
+[2026-03-27T04:18:59.590Z] ERROR: API Call failed after 2 retries to /verify: timeout of 10000ms exceeded
+[2026-03-27T04:18:59.593Z] WARN: Biometric service error: timeout of 10000ms exceeded
+[2026-03-27T04:18:59.596Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T04:18:59.643Z] INFO: KYC completed: 273ea337-d372-4d02-ac91-a2a478295c90 → REVIEW (risk=75)
+[2026-03-27T04:32:02.609Z] INFO: Session created: 9bfd2e44-03bb-406f-874d-071a68e4629d
+[2026-03-27T04:32:46.263Z] WARN: API Call failed (Attempt 1/2) for /analyze. Retrying...
+[2026-03-27T04:32:57.291Z] WARN: API Call failed (Attempt 2/2) for /analyze. Retrying...
+[2026-03-27T04:33:09.319Z] ERROR: API Call failed after 2 retries to /analyze: timeout of 10000ms exceeded
+[2026-03-27T04:33:09.359Z] WARN: Document service error: timeout of 10000ms exceeded
+[2026-03-27T04:33:20.438Z] WARN: API Call failed (Attempt 1/2) for /verify. Retrying...
+[2026-03-27T04:33:31.455Z] WARN: API Call failed (Attempt 2/2) for /verify. Retrying...
+[2026-03-27T04:33:43.470Z] ERROR: API Call failed after 2 retries to /verify: timeout of 10000ms exceeded
+[2026-03-27T04:33:43.473Z] WARN: Biometric service error: timeout of 10000ms exceeded
+[2026-03-27T04:33:43.479Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T04:33:43.537Z] INFO: KYC completed: 9bfd2e44-03bb-406f-874d-071a68e4629d → REVIEW (risk=75)
+[2026-03-27T04:34:43.222Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T04:34:43.314Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-27T04:34:43.333Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T04:42:12.371Z] INFO: Session created: b9a7e8af-f515-42c1-bcf2-4b968846702b
+[2026-03-27T04:42:55.224Z] WARN: API Call failed (Attempt 1/2) for /verify. Retrying...
+[2026-03-27T04:43:00.243Z] WARN: API Call failed (Attempt 2/2) for /verify. Retrying...
+[2026-03-27T04:44:02.280Z] ERROR: API Call failed after 2 retries to /verify: timeout of 60000ms exceeded
+[2026-03-27T04:44:02.282Z] WARN: Biometric service error: timeout of 60000ms exceeded
+[2026-03-27T04:44:02.283Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T04:44:02.290Z] INFO: KYC completed: b9a7e8af-f515-42c1-bcf2-4b968846702b → REVIEW (risk=75)
+[2026-03-27T10:37:36.927Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T10:37:36.940Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-27T10:37:36.943Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T10:40:08.744Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T10:40:08.764Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-27T10:40:08.768Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T10:41:30.918Z] WARN: Device precheck unavailable: Neo4j driver not initialized
+[2026-03-27T10:41:31.088Z] INFO: Session created: edb2e00d-cc20-4062-935b-f578f504d479
+[2026-03-27T10:42:30.950Z] WARN: API Call failed (Attempt 1/2) for /verify. Retrying...
+[2026-03-27T10:42:35.955Z] WARN: API Call failed (Attempt 2/2) for /verify. Retrying...
+[2026-03-27T10:43:37.975Z] ERROR: API Call failed after 2 retries to /verify: timeout of 60000ms exceeded
+[2026-03-27T10:43:37.976Z] WARN: Biometric service error: timeout of 60000ms exceeded
+[2026-03-27T10:43:37.977Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T10:43:37.984Z] INFO: KYC completed: edb2e00d-cc20-4062-935b-f578f504d479 -> REVIEW (risk=70)
+[2026-03-27T10:46:45.863Z] WARN: Device precheck unavailable: Neo4j driver not initialized
+[2026-03-27T10:46:45.881Z] INFO: Session created: afb9cced-97ae-4fba-9d90-ef5bc04ae893
+[2026-03-27T10:47:32.576Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T10:47:32.583Z] INFO: KYC completed: afb9cced-97ae-4fba-9d90-ef5bc04ae893 -> APPROVED (risk=0)
+[2026-03-27T10:48:12.070Z] WARN: Device precheck unavailable: Neo4j driver not initialized
+[2026-03-27T10:48:12.075Z] INFO: Session created: 3cf7aeb1-2e20-4c19-b5bf-58db4c4c0f41
+[2026-03-27T10:48:45.599Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T10:48:45.607Z] INFO: KYC completed: 3cf7aeb1-2e20-4c19-b5bf-58db4c4c0f41 -> REVIEW (risk=40)
+[2026-03-27T11:01:15.188Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T11:01:15.202Z] WARN: Neo4j connection failed (continuing without Neo4j): Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0.
+[2026-03-27T11:01:15.207Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T11:02:17.933Z] WARN: Device precheck unavailable: Neo4j driver not initialized
+[2026-03-27T11:02:17.987Z] INFO: Session created: 7aa0ac1f-b393-40d1-a717-d89e30019c12
+[2026-03-27T11:03:00.885Z] WARN: Neo4j error: Neo4j driver not initialized
+[2026-03-27T11:03:00.901Z] INFO: KYC completed: 7aa0ac1f-b393-40d1-a717-d89e30019c12 -> REJECTED (risk=95)
+[2026-03-27T12:55:36.082Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T12:55:40.752Z] WARN: Neo4j connection failed (continuing without Neo4j): The client is unauthorized due to authentication failure.
+[2026-03-27T12:55:40.774Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T13:01:08.577Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-27T13:01:09.519Z] INFO: Neo4j connected: neo4j+s://1f184ccb.databases.neo4j.io
+[2026-03-27T13:01:09.525Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-27T13:02:05.187Z] INFO: Session created: 8acd5679-9108-4972-9daf-3b8598e186b3
+[2026-03-27T13:03:36.419Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=1 panCount=1 flagged=false
+[2026-03-27T13:03:36.439Z] INFO: KYC completed: 8acd5679-9108-4972-9daf-3b8598e186b3 -> REVIEW (risk=65)
+[2026-03-27T13:10:26.543Z] INFO: Session created: 1a4adcfd-2ee1-448a-bd78-a21b22913ebc
+[2026-03-27T13:11:14.702Z] INFO: Fraud check: deviceId=qa_test_device_001 userCount=1 panCount=1 flagged=false
+[2026-03-27T13:11:14.937Z] INFO: KYC completed: 1a4adcfd-2ee1-448a-bd78-a21b22913ebc -> REVIEW (risk=65)
+[2026-03-27T13:11:51.973Z] INFO: Session created: 5878d4c8-e67b-45b0-9338-6b4571319633
+[2026-03-27T13:11:52.139Z] ERROR: Only image files are allowed (jpeg/jpg/png/webp)
+[2026-03-27T13:11:52.200Z] INFO: Session created: bc60c31e-aa99-4f20-821d-b9bed08b48c8
+[2026-03-27T13:11:52.287Z] INFO: Session created: 12a2d758-024a-4ea6-87c1-6d7e9be5a968
+[2026-03-27T13:11:52.345Z] INFO: Session created: 0ae6b9bf-41d7-4f16-b835-f504fe722ac4
+[2026-03-27T13:11:52.419Z] INFO: Session created: 2147789d-a722-4e22-8109-78a209be108a
+[2026-03-27T13:11:52.479Z] INFO: Session created: 1b1e8d04-dd3b-4e02-95df-b9b41ac1e393
+[2026-03-27T13:11:52.553Z] INFO: Session created: 402ebc39-c8fc-4c63-970c-603d80ae780b
+[2026-03-27T13:11:52.649Z] INFO: Session created: 63cbb4f5-351a-4c1e-8295-3b534a2a657c
+[2026-03-27T13:11:52.729Z] INFO: Session created: ce461921-daf8-48a8-8ef7-d0b6f5727fba
+[2026-03-28T04:33:25.414Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-28T04:33:26.830Z] INFO: Neo4j connected: neo4j+s://1f184ccb.databases.neo4j.io
+[2026-03-28T04:33:26.834Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-28T04:34:20.982Z] INFO: Session created: ae43cafd-4446-414f-97a5-0f67617c780b
+[2026-03-28T04:36:14.485Z] WARN: API Call failed (Attempt 1/2) for /verify. Retrying...
+[2026-03-28T04:36:19.512Z] WARN: API Call failed (Attempt 2/2) for /verify. Retrying...
+[2026-03-28T04:37:21.650Z] ERROR: API Call failed after 2 retries to /verify: timeout of 60000ms exceeded
+[2026-03-28T04:37:21.707Z] WARN: Biometric service error: timeout of 60000ms exceeded
+[2026-03-28T04:37:23.410Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-28T04:37:23.589Z] INFO: KYC completed: ae43cafd-4446-414f-97a5-0f67617c780b -> REJECTED (risk=100)
+[2026-03-28T04:41:33.627Z] INFO: Session created: 220e43f7-d1be-441d-9100-f94e3d27a44e
+[2026-03-28T04:42:45.104Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-28T04:42:45.116Z] INFO: KYC completed: 220e43f7-d1be-441d-9100-f94e3d27a44e -> REJECTED (risk=75)
+[2026-03-28T12:51:57.135Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-28T12:51:57.882Z] INFO: Neo4j connected: neo4j+s://1f184ccb.databases.neo4j.io
+[2026-03-28T12:51:57.885Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-28T12:52:37.947Z] INFO: Session created: 8e7e6684-7e03-421f-acf6-651f0f1aaab9
+[2026-03-28T12:53:38.014Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-28T12:53:38.024Z] INFO: KYC completed: 8e7e6684-7e03-421f-acf6-651f0f1aaab9 -> REJECTED (risk=75)
+[2026-03-28T13:01:35.048Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-28T13:01:35.063Z] INFO: KYC completed: 8e7e6684-7e03-421f-acf6-651f0f1aaab9 -> REJECTED (risk=75)
+[2026-03-28T13:02:07.566Z] INFO: Session created: a5d07c66-5c4f-44a5-9e86-5ea8d45f7bc3
+[2026-03-28T13:02:39.566Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-28T13:02:39.576Z] INFO: KYC completed: a5d07c66-5c4f-44a5-9e86-5ea8d45f7bc3 -> REJECTED (risk=100)
+[2026-03-28T13:06:41.142Z] INFO: Session created: 261a54c2-c0f0-4cfc-932a-237e07a18693
+[2026-03-28T13:07:08.154Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-28T13:07:08.162Z] INFO: KYC completed: 261a54c2-c0f0-4cfc-932a-237e07a18693 -> REJECTED (risk=100)
