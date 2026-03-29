@@ -356,7 +356,3 @@ This repository is a strong local prototype, but production deployment would sti
 - production infrastructure and monitoring
 - audit retention and compliance hardening
 - model calibration with real enterprise datasets
-
-## License / Usage
-
-Add your preferred license before public distribution if required.
