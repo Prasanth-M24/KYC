@@ -40,7 +40,6 @@ https://www.mongodb.com/try/download/community
 
 ### Install Neo4j Desktop
 https://neo4j.com/download/
-Create a database with password: `aegis1234`
 
 ---
 
