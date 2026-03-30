@@ -41,7 +41,9 @@ This repository is structured so a new developer can clone or extract it, instal
 - FastAPI
 - OpenCV
 - OCR-based document analysis
-- SFace / biometric matching
+- YOLOv11 face detection
+- OpenCV SFace similarity matching
+- DeepFace fallback
 
 ### Databases
 
@@ -294,15 +296,25 @@ The document service uses Tesseract. If OCR is weak or unavailable:
 
 ### Biometric Model
 
-The biometric service is configured to use OpenCV SFace when the model is available locally.
+The biometric service is configured to use a YOLOv11-assisted document and selfie face-matching pipeline.
 
-Expected local model path:
+Primary model flow:
+
+- YOLOv11 face detection to crop the face from the selfie, PAN, and Aadhaar
+- Best-document selection across PAN and Aadhaar
+- OpenCV SFace embeddings for final similarity scoring
+
+Fallback flow:
+
+- DeepFace
+- offline similarity fallback if advanced models are unavailable
+
+Bundled local model paths:
 
 ```text
+services/biometric/models/yolo11n_face_detection.onnx
 services/biometric/models/face_recognition_sface_2021dec.onnx
 ```
-
-If the file is missing, biometric matching may fall back to a weaker offline method.
 
 ## Troubleshooting
 

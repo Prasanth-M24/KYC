@@ -199,7 +199,15 @@ exports.verifyFace = async (req, res) => {
     const FormData = require('form-data');
     const bioForm = new FormData();
     bioForm.append('selfie', fs.createReadStream(selfieFile.path), selfieFile.originalname);
-    bioForm.append('doc_image', fs.createReadStream(session.aadhaarPath), 'aadhaar.jpg');
+    if (session.aadhaarPath) {
+      bioForm.append('aadhaar_image', fs.createReadStream(session.aadhaarPath), 'aadhaar.jpg');
+    }
+    if (session.panPath) {
+      bioForm.append('pan_image', fs.createReadStream(session.panPath), 'pan.jpg');
+    }
+    if (!session.aadhaarPath && !session.panPath) {
+      return res.status(400).json({ error: 'Upload PAN or Aadhaar before biometric verification' });
+    }
     bioResult = (await bioClient.post('/verify', bioForm, { headers: bioForm.getHeaders() })).data;
   } catch (err) {
     logger.warn('Biometric service error: ' + err.message);

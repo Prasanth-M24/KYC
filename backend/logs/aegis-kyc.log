@@ -174,3 +174,44 @@
 [2026-03-28T13:06:41.142Z] INFO: Session created: 261a54c2-c0f0-4cfc-932a-237e07a18693
 [2026-03-28T13:07:08.154Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
 [2026-03-28T13:07:08.162Z] INFO: KYC completed: 261a54c2-c0f0-4cfc-932a-237e07a18693 -> REJECTED (risk=100)
+[2026-03-30T04:04:55.806Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-30T04:04:57.767Z] INFO: Neo4j connected: neo4j+s://1f184ccb.databases.neo4j.io
+[2026-03-30T04:04:57.771Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-30T04:06:01.799Z] INFO: Session created: 964283bf-0303-4d92-8ea5-a54fcd8cc1f2
+[2026-03-30T04:07:02.405Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-30T04:07:02.518Z] INFO: KYC completed: 964283bf-0303-4d92-8ea5-a54fcd8cc1f2 -> REJECTED (risk=75)
+[2026-03-30T04:23:41.505Z] INFO: Session created: 6cf149eb-8577-4039-ba9e-be81da9e6fd7
+[2026-03-30T04:24:46.712Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-30T04:24:46.785Z] INFO: KYC completed: 6cf149eb-8577-4039-ba9e-be81da9e6fd7 -> REJECTED (risk=75)
+[2026-03-30T04:57:51.857Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-30T04:57:53.405Z] INFO: Neo4j connected: neo4j+s://1f184ccb.databases.neo4j.io
+[2026-03-30T04:57:53.452Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-30T04:58:56.043Z] INFO: Session created: 9385373c-cfdb-47bf-a2dd-c20447406a04
+[2026-03-30T05:00:21.579Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-30T05:00:21.833Z] INFO: KYC completed: 9385373c-cfdb-47bf-a2dd-c20447406a04 -> REVIEW (risk=35)
+[2026-03-30T05:01:35.686Z] INFO: Session created: 378d0548-ca3c-4560-917b-f5e5a1106f5a
+[2026-03-30T05:02:50.248Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-30T05:02:50.404Z] INFO: KYC completed: 378d0548-ca3c-4560-917b-f5e5a1106f5a -> REJECTED (risk=100)
+[2026-03-30T05:28:43.176Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-30T05:28:45.384Z] INFO: Neo4j connected: neo4j+s://1f184ccb.databases.neo4j.io
+[2026-03-30T05:28:45.392Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-30T05:30:03.428Z] INFO: Session created: b0fab6a5-d4e6-4652-bb0c-dbec8863b369
+[2026-03-30T05:31:18.604Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-30T05:31:18.652Z] INFO: KYC completed: b0fab6a5-d4e6-4652-bb0c-dbec8863b369 -> REJECTED (risk=85)
+[2026-03-30T05:34:54.182Z] INFO: Session created: cd40786e-6214-40d6-8fdb-0b2e66693cbe
+[2026-03-30T05:35:54.165Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-30T05:35:54.332Z] INFO: KYC completed: cd40786e-6214-40d6-8fdb-0b2e66693cbe -> REVIEW (risk=35)
+[2026-03-30T06:28:34.744Z] INFO: MongoDB connected: mongodb://localhost:27017/aegis_kyc
+[2026-03-30T06:28:37.789Z] INFO: Neo4j connected: neo4j+s://1f184ccb.databases.neo4j.io
+[2026-03-30T06:28:37.799Z] INFO: AEGIS-KYC Backend running on http://localhost:3001
+[2026-03-30T06:34:10.791Z] INFO: Session created: 6b43dc4c-df8d-4cb8-bb72-377b838b3d92
+[2026-03-30T06:35:34.774Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-30T06:35:35.002Z] INFO: KYC completed: 6b43dc4c-df8d-4cb8-bb72-377b838b3d92 -> REJECTED (risk=100)
+[2026-03-30T06:36:25.166Z] INFO: Session created: 6548160e-987b-4d04-8695-7c7892b6f883
+[2026-03-30T07:01:53.039Z] INFO: Session created: 3c3577d0-4d7d-456a-bc84-9a98bfbd0e06
+[2026-03-30T07:03:52.900Z] WARN: API Call failed (Attempt 1/2) for /verify. Retrying...
+[2026-03-30T07:03:57.871Z] WARN: API Call failed (Attempt 2/2) for /verify. Retrying...
+[2026-03-30T07:04:59.966Z] ERROR: API Call failed after 2 retries to /verify: timeout of 60000ms exceeded
+[2026-03-30T07:04:59.972Z] WARN: Biometric service error: timeout of 60000ms exceeded
+[2026-03-30T07:05:01.072Z] INFO: Fraud check: deviceId=dev_45e63137 userCount=2 panCount=1 flagged=false
+[2026-03-30T07:05:01.171Z] INFO: KYC completed: 3c3577d0-4d7d-456a-bc84-9a98bfbd0e06 -> REJECTED (risk=100)

@@ -9,6 +9,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger("biometric_main")
 model_status = {
     "preferred_provider": "orb_histogram_ensemble",
+    "yolo_face": {"available": False},
     "deepface": {"available": False},
     "sface_ready": False,
     "sface_model_path": None,
@@ -23,17 +24,24 @@ def preload_models():
     global model_status
     status = warmup_biometric_models()
     model_status = status
+    yolo_status = status.get("yolo_face", {})
+    if yolo_status.get("available"):
+        logger.info(f"YOLOv11 face detector ready: {yolo_status.get('model_path')}")
     if status.get("sface_ready"):
         logger.info(f"SFace biometric model ready: {status.get('sface_model_path')}")
     deepface_status = status.get("deepface", {})
     if deepface_status.get("available"):
         logger.info("DeepFace warmup completed.")
+    elif yolo_status.get("available") and status.get("sface_ready"):
+        logger.info("YOLOv11 face detection with SFace matching is active as the primary biometric recognizer.")
+    elif yolo_status.get("available"):
+        logger.info("YOLOv11 face detection is active, with fallback verification providers enabled.")
     elif status.get("sface_ready"):
-        logger.info("DeepFace warmup unavailable, but OpenCV SFace is active as the primary alternative recognizer.")
+        logger.info("YOLOv11 warmup unavailable, but OpenCV SFace fallback remains active.")
     elif deepface_status.get("skipped"):
-        logger.info("DeepFace warmup skipped because local weights are not installed. Advanced recognition needs SFace or DeepFace weights.")
+        logger.info("DeepFace warmup skipped because local weights are not installed. Advanced recognition needs YOLOv11 or SFace assets.")
     else:
-        logger.warning(f"DeepFace warmup unavailable, offline fallback remains active: {deepface_status.get('error')}")
+        logger.warning(f"Advanced biometric warmup unavailable, offline fallback remains active: {deepface_status.get('error')}")
 
 
 @app.get("/health")
@@ -49,29 +57,44 @@ def get_model_status():
 @app.post("/verify")
 async def verify_biometric(
     selfie: UploadFile = File(...),
-    doc_image: UploadFile = File(...)
+    doc_image: UploadFile | None = File(default=None),
+    aadhaar_image: UploadFile | None = File(default=None),
+    pan_image: UploadFile | None = File(default=None),
 ):
     """
     Compare selfie with document photo and assess liveness.
     Returns face_match_score, liveness_score, and detailed signals.
     """
+    if doc_image is None and aadhaar_image is None and pan_image is None:
+        raise HTTPException(status_code=400, detail="At least one document image is required")
+
     try:
-        selfie_bytes    = await selfie.read()
-        doc_bytes       = await doc_image.read()
-        selfie_img      = Image.open(io.BytesIO(selfie_bytes))
-        doc_img         = Image.open(io.BytesIO(doc_bytes))
+        selfie_bytes = await selfie.read()
+        selfie_img = Image.open(io.BytesIO(selfie_bytes))
         selfie_img.load()
-        doc_img.load()
+
+        document_inputs = []
+        for label, upload in (("aadhaar", aadhaar_image), ("pan", pan_image), ("document", doc_image)):
+            if upload is None:
+                continue
+            doc_bytes = await upload.read()
+            doc_img = Image.open(io.BytesIO(doc_bytes))
+            doc_img.load()
+            document_inputs.append({"label": label, "image": doc_img, "filename": upload.filename})
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Cannot open image: {e}")
 
-    # Keep enough detail for matching while preventing oversized uploads from stalling the API.
     selfie_img.thumbnail((768, 768))
-    doc_img.thumbnail((768, 768))
+    for document in document_inputs:
+        document["image"].thumbnail((1600, 1600))
 
     import asyncio
 
-    logger.info(f"Biometric verify: selfie={selfie.filename} doc={doc_image.filename}")
+    logger.info(
+        "Biometric verify: selfie=%s docs=%s",
+        selfie.filename,
+        ",".join(document["filename"] or document["label"] for document in document_inputs),
+    )
 
     try:
         # Liveness check on selfie with timeout
@@ -81,9 +104,12 @@ async def verify_biometric(
         )
         logger.info(f"Liveness score: {liveness_result['liveness_score']}")
 
-        # Face match with timeout
         match_result = await asyncio.wait_for(
-            asyncio.to_thread(match_faces, selfie_img, doc_img),
+            asyncio.to_thread(
+                match_faces,
+                selfie_img,
+                [{"label": item["label"], "image": item["image"]} for item in document_inputs],
+            ),
             timeout=25.0
         )
         logger.info(f"Face match score: {match_result['face_match_score']} method={match_result.get('method')}")
@@ -100,6 +126,9 @@ async def verify_biometric(
         "face_verified":    match_result.get("verified", False),
         "face_distance":    match_result.get("distance"),
         "match_method":     match_result.get("method"),
+        "document_source":  match_result.get("document_source"),
+        "document_candidates": match_result.get("document_candidates", []),
+        "detector_provider": match_result.get("detector_provider"),
         "liveness_score":   liveness_result["liveness_score"],
         "liveness_signals": liveness_result["signals"],
     }
